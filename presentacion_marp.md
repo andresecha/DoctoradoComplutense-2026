@@ -396,8 +396,8 @@ erDiagram
 ---
 
 <!-- _style: "font-size: 21px;" -->
-
-# Ejercicio colectivo: diseñando tu diccionario de datos
+# La parte interesante
+## Ejercicio colectivo: diseñando tu diccionario de datos
 
 Para definir el modelo conceptual de tu propia investigación, responde a estas preguntas clave:
 
@@ -456,4 +456,6 @@ Existen valores especiales para representar estados lógicos binarios o archivos
 *   **`BOOLEAN`** (lógico booleano): Solo admite dos valores posibles: **`TRUE`** (Verdadero) o **`FALSE`** (Falso). Es óptimo para caracterizaciones directas de tipo sí/no (ej. `es_manuscrito`, `es_anonimo`, `digitalizado`).
 *   **`BLOB`** (*Binary Large Object* - objeto binario grande): Almacena secuencias de bytes puros (archivos multimedia). Se usa cuando necesitas guardar la imagen de un manuscrito digitalizado, un audio o un archivo PDF directamente dentro de una celda de la base de datos.
     *   *Recomendación de diseño:* En bases de datos grandes, suele ser mejor guardar la ruta del archivo como texto (`VARCHAR`) y almacenar los archivos en una carpeta del servidor.
+
+___
 
