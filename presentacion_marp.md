@@ -97,7 +97,7 @@ Escuela de doctorado
 <center>
   <img src="images/dinamica.jpg" height="450" style="border-radius: 8px; border: 1px solid #5c6370; margin-bottom: 5px;" />
 </center>
-<span class="cite">© 2026 International Crisis Group</span>
+<center><span class="cite">© 2026 International Crisis Group</span></center>
 
 <div style="background-color: #2c313c; padding: 10px 15px; border-radius: 8px; border-left: 5px solid #e5c07b; text-align: left;">
   <h3 style="color: #e5c07b; margin: 0; font-size: 0.9em; font-family: 'Georgia', serif;">Observar la dinámica</h3>
@@ -408,3 +408,52 @@ Para definir el modelo conceptual de tu propia investigación, responde a estas 
 5.  **Relaciones y cardinalidad:** ¿Cómo se conecta tu entidad con otras del corpus? (1:1, 1:N, N:M) y ¿cuál es la clave foránea (`FK`)?
 
 *¡Compártelo en la pizarra para que lo discutamos y normalicemos colectivamente!*
+
+
+
+---
+
+## Tipos de datos SQL (I): cadenas de texto
+
+Para representar texto libre, títulos, nombres o transcripciones en SQL, disponemos de tres moldes principales:
+
+*   **`VARCHAR(N)`** (*Variable Character* - caracteres variables): Almacena texto de longitud variable hasta un máximo de `N` caracteres. Si guardas `"Lope"`, solo ocupa 4 caracteres en disco. Es el tipo más usado para nombres, títulos y direcciones.
+*   **`CHAR(N)`** (*Character* - longitud fija): Siempre reserva exactamente `N` caracteres en disco. Si guardas `"Lope"` en un `CHAR(10)`, rellenará el resto con 6 espacios vacíos. Ideal solo para códigos fijos (ej. códigos de idioma como `'es'`, `'fr'`).
+*   **`TEXT` o `CLOB`** (*Character Large Object* - objeto de caracteres grande): Diseñado para textos masivos sin límite predefinido (ej. transcripción de un cantar de gesta, citas extensas o notas bibliográficas).
+
+---
+
+<!-- _style: "font-size: 25px;" -->
+
+## Tipos de datos SQL (II): valores numéricos
+
+Para contabilizar, medir o geolocalizar, los números en SQL se dividen por su naturaleza exacta o aproximada:
+
+*   **`INTEGER` o `INT`** (entero): Números sin decimales. Se usa para contar páginas, años (`1605`), identificadores autoincrementales (`ID`) o tiradas de ejemplares.
+*   **`DECIMAL(P, S)` o `NUMERIC`** (decimal exacto): Evita errores de redondeo. 
+    *   `P` (Precisión): Total de dígitos significativos.
+    *   `S` (Escala): Cuántos de esos dígitos son decimales.
+    *   *Ejemplo:* `DECIMAL(9,6)` para coordenadas geográficas (como `40.481979`).
+*   **`FLOAT` o `REAL`** (coma flotante aproximada): Números decimales representados de forma aproximada en binario. Son óptimos para cálculos científicos masivos y rápidos, pero pueden introducir ligeras variaciones en los últimos decimales. No recomendables para identificadores ni datos monetarios.
+
+---
+
+## Tipos de datos SQL (III): fechas y tiempo
+
+En humanidades, el registro temporal debe ser preciso para poder establecer cronologías e intervalos:
+
+*   **`DATE`** (fecha): Almacena exclusivamente una fecha del calendario en formato estándar **`AAAA-MM-DD`** (año-mes-día, ej. `1605-01-16`). No incluye horas.
+*   **`TIME`** (hora): Almacena solo la hora del día en formato **`HH:MM:SS`** (ej. `18:30:00`), sin fecha asociada.
+*   **`TIMESTAMP` o `DATETIME`** (*sello de tiempo*): Fusiona fecha y hora en una sola marca temporal (ej. `1936-07-18 05:00:00`). Útil para registrar acontecimientos exactos.
+*   **`INTERVAL`** (intervalo): Representa una duración o lapso temporal (ej. `"3 years 2 months"` o `"48 hours"`). Muy útil para calcular la duración del proceso de impresión o la vida útil de un manuscrito.
+
+---
+
+## Tipos de datos SQL (IV): booleanos y binarios
+
+Existen valores especiales para representar estados lógicos binarios o archivos completos adjuntos a la base de datos:
+
+*   **`BOOLEAN`** (lógico booleano): Solo admite dos valores posibles: **`TRUE`** (Verdadero) o **`FALSE`** (Falso). Es óptimo para caracterizaciones directas de tipo sí/no (ej. `es_manuscrito`, `es_anonimo`, `digitalizado`).
+*   **`BLOB`** (*Binary Large Object* - objeto binario grande): Almacena secuencias de bytes puros (archivos multimedia). Se usa cuando necesitas guardar la imagen de un manuscrito digitalizado, un audio o un archivo PDF directamente dentro de una celda de la base de datos.
+    *   *Recomendación de diseño:* En bases de datos grandes, suele ser mejor guardar la ruta del archivo como texto (`VARCHAR`) y almacenar los archivos en una carpeta del servidor.
+
