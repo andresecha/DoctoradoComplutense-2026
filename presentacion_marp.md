@@ -395,7 +395,7 @@ erDiagram
 
 ---
 
-<!-- _style: "font-size: 21px;" -->
+<!-- _style: "font-size: 16px;" -->
 # La parte interesante
 ## Ejercicio colectivo: diseñando tu diccionario de datos
 
@@ -407,7 +407,6 @@ Para definir el modelo conceptual de tu propia investigación, responde a estas 
 4.  **Restricciones de integridad:** ¿Qué campos son obligatorios (`NOT NULL`) o únicos (`UNIQUE`)?
 5.  **Relaciones y cardinalidad:** ¿Cómo se conecta tu entidad con otras del corpus? (1:1, 1:N, N:M) y ¿cuál es la clave foránea (`FK`)?
 
-*¡Compártelo en la pizarra para que lo discutamos y normalicemos colectivamente!*
 
 
 
