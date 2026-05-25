@@ -47,6 +47,6 @@ Docente: **Andrés Echavarría**
 
 **Université Sorbonne nouvelle**
 ___
-**Escuela de Doctorado+**
+## **Escuela de Doctorado**
 
 Universidad Complutense de Madrid.
