@@ -6,14 +6,30 @@ La sesión se centra en la fundamentación teórica de la estructuración de la 
 
 ---
 
+
 ## 📁 Guía de materiales del repositorio
 
-Dispones de los materiales de la primera sección en los siguientes formatos:
+Dispones de los materiales del curso en los siguientes formatos:
 
 *   **[`presentacion.html`](presentacion.html) (Recomendado para visualización):** Diapositivas en formato web interactivo. Puedes abrirlas con cualquier navegador (Chrome, Firefox, Safari) en tu ordenador, tablet o móvil. 
     *   *Tip:* Ábrelo en tu navegador y pulsa la tecla **`F`** para entrar en modo de pantalla completa. Navega usando las flechas de dirección de tu teclado (`←` y `→`).
 *   **[`presentacion.pdf`](presentacion.pdf):** Versión estática en PDF de las diapositivas, ideal para imprimir, tomar anotaciones a mano o conservar en tu gestor de referencias.
 *   **[`presentacion_marp.md`](presentacion_marp.md):** Código fuente de las diapositivas en sintaxis Markdown (compatible con el motor de diapositivas Marp). Útil si deseas inspeccionar o recompilar la presentación tú mismo.
+*   **Cuadernos de Jupyter (Adquisición y transcripción de fuentes):**
+    Ubicados en la carpeta [`guias-adquisicion-texto/`](guias-adquisicion-texto/):
+    *   **[`MistralOCR_Transcripcion.ipynb`](guias-adquisicion-texto/MistralOCR_Transcripcion.ipynb):** Guía práctica para el reconocimiento óptico de documentos (OCR) estructurados utilizando la API de Mistral AI en Google Colab.
+    *   **[`Whisper_audio_Transcripcion.ipynb`](guias-adquisicion-texto/Whisper_audio_Transcripcion.ipynb):** Guía práctica para la transcripción automática de audio (ASR) con Whisper de OpenAI en Google Colab con soporte GPU.
+
+---
+
+### 🏛️ Contexto institucional y metodológico (Huma-Num ARIANE)
+
+Estos cuadernos de Jupyter son recursos pedagógicos derivados de las guías metodológicas desarrolladas para la infraestructura de investigación francesa para las humanidades digitales **[Huma-Num](https://www.huma-num.fr/)** y su consorcio **[ARIANE](https://cst-ariane.huma-num.fr)** (consagrado al análisis, difusión y preservación de datos y documentos en el ámbito digital).
+
+Específicamente, estas herramientas se inscriben dentro de las actividades del **[Grupo de Interés en Adquisición asistida de texto (GT2)](https://consortiumariane.gitpages.huma-num.fr/axe1/GT2/GT2.html)** del consorcio ARIANE. Su propósito es guiar de manera didáctica a la comunidad investigadora en la apropiación de tecnologías avanzadas de reconocimiento de texto y habla para la constitución de corpus de estudio.
+
+Las guías metodológicas originales que sirven de base para estos cuadernos de trabajo interactivos fueron diseñadas por el docente y miembro activo del consorcio **[Andrés Echavarría](https://cv.hal.science/andres-echavarria)**, y su código fuente y documentación completa se encuentran disponibles en el repositorio de referencia:
+👉 **[Methodologie de la recherche Numerique (GitHub)](https://github.com/andresecha/Methodologie-de-la-recherche-Numerique/tree/main)**.
 
 ---
 
@@ -43,9 +59,9 @@ Si deseas profundizar en la teoría de modelado de datos y humanidades digitales
 6.  **Wilkinson, M. et al.** (2016). "The FAIR Guiding Principles for scientific data management and stewardship". *Scientific Data*, 3.
 
 ---
-Docente: **Andrés Echavarría** 
+Docente: **[Andrés Echavarría](https://cv.hal.science/andres-echavarria)** 
 
-**Université Sorbonne nouvelle**
+**Université Sorbonne Nouvelle** | **Consorcio Huma-Num ARIANE**
 ___
 ## **Escuela de Doctorado**
 
