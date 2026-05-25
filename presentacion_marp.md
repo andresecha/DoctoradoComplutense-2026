@@ -173,7 +173,7 @@ Es el molde formal que define qué clase de información almacena un atributo y 
 >
 > — **M. Vitali-Rosati, B. Bachimont y P. Gançarski** (2022)
 
-<span class="cite">Vitali-Rosati, M. et al. (2022). "Modèles : du monde réel au monde numérique". *Intelligibilité du numérique*.</span>
+<center><span class="cite">Vitali-Rosati, M. et al. (2022). "Modèles : du monde réel au monde numérique". *Intelligibilité du numérique*.</span></center>
 
 ---
 
